@@ -63,7 +63,7 @@ The `md5sum` command will output a string of hex. That should match the hash lis
 6. Now erase and write the bootloader. Do not do anything else between these commands once you have erased your bootloader. Your device will be unable to boot until you have written a new bootloader.
 
 ```bash
-flash_eraseall /dev/mtd0
+flash_erase /dev/mtd0 0 0
 
 dd if=/system/sdcard/NAME_OF_YOUR_BOOTLOADER_FILE.bin of=/dev/mtd0
 ```
